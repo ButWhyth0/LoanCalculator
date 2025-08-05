@@ -3,7 +3,10 @@ import functions # Importing the writeToFile function to output data to file
 
 functions.clear_file('output.csv')  # Clear the output file before writing new data
 
-with open('input.csv', mode='r') as file: # Open the csv file in read mode
+# Prompts user for the name of the input file
+input_file = input('Please enter csv file with loan data\n')
+
+with open(input_file, mode='r') as file: # Open the csv file in read mode
     data_reader = csv.reader(file)
     for row in data_reader: # Reads contents of file row-by-row
         name = str(row[0])  # First column contains the name
