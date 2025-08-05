@@ -15,7 +15,7 @@ with open('input.csv', mode='r') as file: # Open the csv file in read mode
         total_payable = int(functions.calculate_total_payable(principle, annual_interest, years))  # Calculate total amount payable
         
         # Calculate monthly payment by dividing total payable by the total number of months
-        monthly_payment = total_payable / (years * 12)
+        monthly_payments = total_payable / (years * 12)
         
         # Write the name and total payable amount to the output file
-        functions.writeToFile(name, total_payable) 
+        functions.writeToFile(name, total_payable,monthly_payments) 
